@@ -203,6 +203,7 @@ func main() {
 	fmt.Println("Autorizado: ", auth("kemirandad", "1234"))
 	*/
 
+	/* Bloque 6: Uso de switch
 	modulo := 4 % 2
 	switch modulo {
 	case 0:
@@ -228,7 +229,28 @@ func main() {
 	default:
 		fmt.Println("No condicion")
 	}
+	*/
 
+	// Defer
+	defer fmt.Println("Hola")
+	fmt.Println("Mundo")
+
+	// Continue y break
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+
+		// Continue
+		if i == 2 {
+			fmt.Println("Es dos")
+			continue
+		}
+
+		// Break
+		if i == 8 {
+			fmt.Println("Break")
+			break
+		}
+	}
 }
 
 func tripeArgument(a, b int, c string) {
