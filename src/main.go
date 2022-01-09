@@ -133,6 +133,7 @@ func main() {
 	fmt.Println("Value 1: ", nil, "***  Value 2: ", value3)
 	*/
 
+	/* Bloque 4: Bucle For
 	// For condicional
 	for i := 0; i <= 10; i++ {
 		fmt.Println(i)
@@ -166,6 +167,40 @@ func main() {
 	for i := anotherCounter; i >= 0; i-- {
 		fmt.Println(i)
 	}
+
+	listaNumerosPares := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+	for i, par := range listaNumerosPares {
+		fmt.Printf("posicion %d número par: %d \n", i, par)
+	}
+	*/
+
+	valor1 := 1
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println("Es 1")
+	} else {
+		fmt.Println("No es 1")
+	}
+
+	// With and
+	if valor1 == 1 && valor2 == 3 {
+		fmt.Println("Es verdad")
+	}
+
+	// With or
+	if valor1 == 0 || valor2 == 2 {
+		fmt.Println("Esto tambien es verdad")
+	}
+
+	// Reto
+	for i := 0; i <= 4; i++ {
+		isPar(i)
+	}
+
+	fmt.Println("No autorizado: ", auth("kemirandad", "123"))
+	fmt.Println("Autorizado: ", auth("kemirandad", "1234"))
+
 }
 
 func tripeArgument(a, b int, c string) {
@@ -182,4 +217,21 @@ func returnValue(a int) int {
 
 func doubleReturn(a int) (c, d int) {
 	return a, a * 2
+}
+
+func isPar(a int) (c bool) {
+	if a%2 == 0 {
+		fmt.Println("Es par")
+		return true
+	} else {
+		fmt.Println("No es par")
+		return false
+	}
+}
+
+func auth(user, password string) (out bool) {
+	if user == "kemirandad" && password == "1234" {
+		return true
+	}
+	return false
 }
