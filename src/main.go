@@ -119,7 +119,7 @@ func main() {
 	fmt.Sscanf("Kim is 22 years old", "%s is %d years old", &name, &age)
 	fmt.Printf("%s, %d\n", name, age)
 	*/
-
+	/* Bloque 3: funciones
 	normalFunction("Hola Mundo")
 	tripeArgument(1, 2, "Kenny")
 
@@ -131,7 +131,41 @@ func main() {
 
 	_, value3 := doubleReturn(5)
 	fmt.Println("Value 1: ", nil, "***  Value 2: ", value3)
+	*/
 
+	// For condicional
+	for i := 0; i <= 10; i++ {
+		fmt.Println(i)
+	}
+
+	fmt.Println()
+
+	// For while
+	counter := 0
+	for counter < 10 {
+		fmt.Println(counter)
+		counter++
+	}
+
+	fmt.Println()
+
+	// For forever
+	counterForever := 0
+	for {
+		fmt.Println(counterForever)
+		counterForever++
+		if counterForever == 20 {
+			break
+		}
+	}
+
+	fmt.Println()
+
+	// Reto
+	anotherCounter := 10
+	for i := anotherCounter; i >= 0; i-- {
+		fmt.Println(i)
+	}
 }
 
 func tripeArgument(a, b int, c string) {
