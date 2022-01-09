@@ -86,6 +86,7 @@ func main() {
 	fmt.Println("Area del circulo: ", areaDelCirculo)
 	*/
 
+	/* Bloque 2: fmt
 	// Declaración de variables
 	helloMessage := "Hello"
 	worldMessage := "World"
@@ -111,4 +112,40 @@ func main() {
 	// Tipo de datos
 	fmt.Printf("helloMessage: %T\n", helloMessage)
 	fmt.Printf("cursos: %T\n", cursos)
+
+	// Scanf
+	var name string
+	var age int
+	fmt.Sscanf("Kim is 22 years old", "%s is %d years old", &name, &age)
+	fmt.Printf("%s, %d\n", name, age)
+	*/
+
+	normalFunction("Hola Mundo")
+	tripeArgument(1, 2, "Kenny")
+
+	value := returnValue(2)
+	fmt.Println("Value: ", value)
+
+	value1, value2 := doubleReturn(2)
+	fmt.Println("Value 1: ", value1, "***  Value 2: ", value2)
+
+	_, value3 := doubleReturn(5)
+	fmt.Println("Value 1: ", nil, "***  Value 2: ", value3)
+
+}
+
+func tripeArgument(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+func normalFunction(message string) {
+	fmt.Println(message)
+}
+
+func returnValue(a int) int {
+	return a * 2
+}
+
+func doubleReturn(a int) (c, d int) {
+	return a, a * 2
 }
