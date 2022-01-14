@@ -286,10 +286,26 @@ func main() {
 	//	fmt.Println(i)
 	//}
 
+	/* Bloque 9: Recorriendo Arrays y Slices
 	isPalindromo("Ama")
 	// ama o ama
 	// amor o roma
+	*/
 
+	m := make(map[string]int)
+	m["Jose"] = 15
+	m["Pepito"] = 20
+	fmt.Println(m)
+
+	// Recorrer map
+
+	for i, v := range m {
+		fmt.Println(i, v)
+	}
+
+	// Encontrar un valor
+	value, ok := m["Jose"]
+	fmt.Println(value, ok)
 }
 
 func isPalindromo(text string) {
