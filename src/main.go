@@ -292,6 +292,7 @@ func main() {
 	// amor o roma
 	*/
 
+	/* Bloque 10: maps
 	m := make(map[string]int)
 	m["Jose"] = 15
 	m["Pepito"] = 20
@@ -306,6 +307,23 @@ func main() {
 	// Encontrar un valor
 	value, ok := m["Jose"]
 	fmt.Println(value, ok)
+	*/
+
+	myCar := car{brand: "Ford", year: 2020}
+	fmt.Println(myCar)
+
+	// Otra manera
+
+	var otherCar car
+	otherCar.brand = "Ferrari"
+	fmt.Println(otherCar)
+}
+
+type car struct {
+	brand string
+	year  int
+	isNew bool
+	seats int
 }
 
 func isPalindromo(text string) {
