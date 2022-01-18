@@ -4,6 +4,7 @@ package main
 // Modulo para imprimir en consola y mas...
 import (
 	"fmt"
+	"src/mypackage"
 	"strings"
 )
 
@@ -309,6 +310,7 @@ func main() {
 	fmt.Println(value, ok)
 	*/
 
+	/* Bloque 11: Struct
 	myCar := car{brand: "Ford", year: 2020}
 	fmt.Println(myCar)
 
@@ -317,6 +319,9 @@ func main() {
 	var otherCar car
 	otherCar.brand = "Ferrari"
 	fmt.Println(otherCar)
+	*/
+	var myCar mypackage.CarPublic
+
 }
 
 type car struct {
